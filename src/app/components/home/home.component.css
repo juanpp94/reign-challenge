@@ -1,0 +1,54 @@
+.wrapper {
+    margin-top: 54px;
+    margin-bottom: 25px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 30px;
+    grid-auto-rows: 100px;
+  }
+
+@media only screen and (max-width: 600px) {
+    .wrapper {
+        grid-template-columns: repeat(1, 1fr);
+    }
+     .new {
+        display: flex;
+        border-radius: 6px;
+        border: solid 1px #979797;
+        justify-content: center;
+        column-gap: 5px;
+        margin: 0px 25px 0px 40px;
+    }
+
+     .new .time-information {
+        margin-top: 16px;
+        display: flex;
+        gap: 10px;
+        padding-left: 15px;
+        padding-bottom: 14px;
+        font-size: 11px;
+    }
+
+     .new .title {
+        padding-left: 15px;
+        font-size: 14px;
+    }
+
+
+
+     .new .heart-icon {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 15px 22px 13px 22px;
+        background-color: #ececec;
+    }
+
+     .new .heart-icon img {
+        width: 24px;
+        height: 22px;
+    }
+
+
+
+}
