@@ -1,0 +1,29 @@
+.navigation {
+    margin-top: 70px;
+    display: flex;
+    justify-content: center;
+}
+
+nav {
+    display: flex;
+}
+.nav-button {
+    width: 98px;
+    height: 31px;
+    border-radius: 2px;
+    border: solid 1px #d6d6d6;
+    font-family: 'Roboto', sans-serif;
+    
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.75;
+    padding: 2px;
+    letter-spacing: normal;
+    text-align: center;
+    color: #606060;
+}
+
+.nav-button:focus{
+    border: solid 1px #1797ff;
+    color: #1797ff;
+}

@@ -1,0 +1,126 @@
+header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    margin-bottom: 50px;
+    box-shadow: 0 1px 4px 0 rgba(0, 21, 41, 0.12);
+    height: 114px;
+    background-image: linear-gradient(to bottom, #ececec -32%, #fff 124%);
+
+}
+
+
+#small-logo {
+    display: none;
+}
+
+#medium-logo {
+    display: none;
+}
+
+#large-logo {
+    display: block;
+    margin-left: 50px;
+    width: 208px;
+    height: 28px;
+}
+@media only screen and (max-width: 1200px) {
+
+    header {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        margin-bottom: 50px;
+        box-shadow: 0 1px 4px 0 rgba(0, 21, 41, 0.12);
+        height: 114px;
+        background-image: linear-gradient(to bottom, #ececec -32%, #fff 124%);
+
+    }
+
+
+    #small-logo {
+        display: none;
+    }
+
+    #medium-logo {
+        display: none;
+        /*margin-left: 25px;*/
+    }
+
+    #large-logo {
+        display: block;
+    }
+}
+@media only screen and (max-width: 992px) {
+
+    header {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        margin-bottom: 50px;
+        box-shadow: 0 1px 4px 0 rgba(0, 21, 41, 0.12);
+        height: 114px;
+        background-image: linear-gradient(to bottom, #ececec -32%, #fff 124%);
+
+    }
+
+
+    #small-logo {
+        display: none;
+    }
+
+    #medium-logo {
+        display: none;
+        /*margin-left: 25px;*/
+    }
+
+    #large-logo {
+        display: block;
+        margin-left: 25px;
+    }
+}
+@media only screen and (max-width: 768px) {
+
+    header {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        margin-bottom: 50px;
+        box-shadow: 0 1px 4px 0 rgba(0, 21, 41, 0.12);
+        height: 114px;
+        background-image: linear-gradient(to bottom, #ececec -32%, #fff 124%);
+
+    }
+
+
+    #small-logo {
+        display: none;
+    }
+
+    #medium-logo {
+        display: block;
+        margin-left: 25px;
+        width: 208px;
+        height: 28px;
+    }
+
+    #large-logo {
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+
+    #small-logo {
+        display: block;
+        margin-left: 25px;
+    }
+    #medium-logo {
+        display: none;
+    }
+   
+}
