@@ -1,16 +1,21 @@
-<article class="new" >
-    <header>
-        <div class="time-information">
-            <picture class="clock-icon">
-                <img src="../../../assets//iconmonstr-time-2.png" alt="clock image"/>
+
+    <article  >
+        <a class="new"  href="{{new.story_url}}" target="_blank">
+            <header>
+                <div class="time-information">
+                    <picture class="clock-icon">
+                        <img src="../../../assets//iconmonstr-time-2.png" alt="clock image"/>
+                    </picture>
+                    <p>{{new.created_at}}</p>
+                </div>
+                <div class="title">
+                    <h4>{{new.story_title}}</h4>
+                </div>
+            </header>
+            <picture class="heart-icon">
+                <img *ngIf="new.favorite === false "(click)=" add_to_favorites(new.story_title,new.author)" src="../../../assets/iconmonstr-favorite-2.png" alt="">
+                <img *ngIf="new.favorite === true" (click)=" add_to_favorites(new.story_title,new.author)" src="../../../assets/iconmonstr-favorite-3.png" alt="">
             </picture>
-            <p>{{new.created_at}}</p>
-        </div>
-        <div class="title">
-            <h4>{{new.story_title}}</h4>
-        </div>
-    </header>
-    <picture class="heart-icon">
-        <img src="../../../assets/iconmonstr-favorite-2.png" alt="">
-    </picture>
-</article>
+        </a>
+        
+    </article>

@@ -1,5 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { New } from 'src/app/models/news';
+import { NewsService } from 'src/app/services/news.service';
 
 @Component({
   selector: 'app-new',
@@ -14,9 +15,17 @@ export class NewComponent implements OnInit {
     created_at: 'A hour ago by an author',
     favorite: true,
 }
-  constructor() { }
+  constructor(private _news_service: NewsService) { }
 
   ngOnInit(): void {
+  }
+
+  add_to_favorites(title: string, author: string): void {
+    this._news_service.create_favorites_list();
+    console.log("title:",title);
+    this._news_service.add_to_favorites(title, author);
+
+
   }
 
 }

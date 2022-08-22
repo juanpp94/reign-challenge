@@ -14,17 +14,19 @@ export class HomeComponent implements OnInit {
 
   ngOnInit(): void {
     this.getNews();
+    
     console.log("these are the news",this.news);
   }
 
-  getNews(): void {
+  getNews(): New[] {
     console.log("entre a la funcion");
-    this._news_service.getNews$().subscribe((news:New[]) => 
-    {console.log("esto es lo que recibi del servicio",news);
-  });
+    this._news_service.getNews$().subscribe((news:New[]) => this.news = news);
+    return this.news;
+
+    
     
 
-    }
+  }
 }
 
 
