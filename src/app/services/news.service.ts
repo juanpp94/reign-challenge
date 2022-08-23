@@ -14,10 +14,13 @@ export class NewsService {
 
   constructor(private http: HttpClient) { }
   private readonly URL = environment.api;
+  category: String = '';
   
   getNews$():Observable<any> {
     console.log("getting news");
-    return this.http.get(`${this.URL}/search_by_date?query=''&page=0`)
+    console.log("la categoria es:",this.category);
+    console.log("Esta es la url que se envia:",`${this.URL}/search_by_date?query=${this.category}&page=0`)
+    return this.http.get(`${this.URL}/search_by_date?query=${this.category}&page=0`)
     .pipe(map( ({hits,page}:any) => {
       //console.log('hit en el servicio',hits[0]);
       hits.forEach((hit:any) => {
@@ -30,7 +33,7 @@ export class NewsService {
           let current_minute = current_date.getMinutes(); 
           let hour_difference = current_hour - post_hour;
           let minute_difference = current_minute - post_minute;
-          console.log("hit",hit);
+          //console.log("hit",hit);
           this.news.push({ 
             author: hit.author,
             story_title: hit.story_title,
@@ -41,12 +44,17 @@ export class NewsService {
         }
        
       })
-      console.log("noticias en el servicio:", this.news);
+      console.log("Esta es la url que se envio:",`${this.URL}/search_by_date?query=${this.category}&page=0`)
+      console.log("entre de nuevo");
+      console.log(this.news);
       return this.news;
     }));
   }
 
-
+  get_favorites_list(): any {
+    return JSON.parse(localStorage.getItem('favorites') as string);
+  
+  }
   create_favorites_list(): void {
     let favorite_news: New[] = JSON.parse(localStorage.getItem('favorites') as string);
     if(!favorite_news) {
@@ -55,10 +63,11 @@ export class NewsService {
     
   }
   add_to_favorites(title: string, author: string): void {
+    this.create_favorites_list();
     let favorite_new: New[] = this.news.filter( (local_new: New) => local_new.story_title === title && local_new.author === author);
     console.log(favorite_new);
     favorite_new[0].favorite = true;
-    let favorite_news: New[] = JSON.parse(localStorage.getItem('favorites') as string);
+    let favorite_news: New[] = this.get_favorites_list();
     console.log("favorite news",favorite_news);
     favorite_news.push(favorite_new[0]);
     localStorage.setItem('favorites',JSON.stringify(favorite_news));

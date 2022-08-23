@@ -3,11 +3,12 @@ import { New } from 'src/app/models/news';
 import { NewsService } from 'src/app/services/news.service';
 
 @Component({
-  selector: 'app-new',
-  templateUrl: './new.component.html',
-  styleUrls: ['./new.component.css']
+  selector: 'app-fav-new',
+  templateUrl: './fav-new.component.html',
+  styleUrls: ['./fav-new.component.css']
 })
-export class NewComponent implements OnInit {
+export class FavNewComponent implements OnInit {
+
   @Input() new: New = { 
     author: 'author1',
     story_title: 'Realize for React for Visualizing State flow and component hierarchy',
@@ -22,7 +23,7 @@ export class NewComponent implements OnInit {
   }
 
   add_to_favorites(title: string, author: string): void {
-    //this._news_service.create_favorites_list();
+    this._news_service.create_favorites_list();
     console.log("title:",title);
     this._news_service.add_to_favorites(title, author);
 

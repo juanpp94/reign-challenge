@@ -8,6 +8,10 @@ import { NavigationComponent } from './components/navigation/navigation.componen
 import { HomeComponent } from './components/home/home.component';
 import { NewsService } from './services/news.service';
 import { NewComponent } from './components/new/new.component';
+import { FavesComponent } from './components/faves/faves.component';
+import { RouterModule } from '@angular/router';
+import { FavNewComponent } from './components/fav-new/fav-new.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -15,12 +19,17 @@ import { NewComponent } from './components/new/new.component';
     HeaderComponent,
     NavigationComponent,
     HomeComponent,
-    NewComponent
+    NewComponent,
+    FavesComponent,
+    FavNewComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
+    RouterModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [NewsService],
   bootstrap: [AppComponent]
