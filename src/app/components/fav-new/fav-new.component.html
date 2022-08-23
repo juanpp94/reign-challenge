@@ -1,0 +1,19 @@
+
+    <article class="new">
+        <header>
+            <div class="time-information">
+                <picture class="clock-icon">
+                    <img id="large-clock" src="../../../assets//iconmonstr-time-2@2x.png" alt="clock image"/>
+                </picture>
+                <p>{{new.created_at}}</p>
+            </div>
+            <div class="title">
+                <a   href="{{new.story_url}}" target="_blank"><h4>{{new.story_title}}</h4></a>
+            </div>
+        </header>
+        <picture class="heart-icon">
+            <img id="small-empty-heart" *ngIf="new.favorite === false "(click)=" add_to_favorites(new.story_title,new.author)" src="../../../assets/iconmonstr-favorite-2.png" alt="">
+            <img id="small-filled-heart" *ngIf="new.favorite === true" (click)=" add_to_favorites(new.story_title,new.author)" src="../../../assets/iconmonstr-favorite-3.png" alt="">
+           
+        </picture>
+</article>

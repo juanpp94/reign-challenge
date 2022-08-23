@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 
+/**Component of the navigation menu */
 @Component({
   selector: 'app-navigation',
   templateUrl: './navigation.component.html',
