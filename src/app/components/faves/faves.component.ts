@@ -15,11 +15,10 @@ export class FavesComponent implements OnInit {
   ngOnInit(): void {
     this.get_favorite_news();
     
-    console.log("these are the news",this.favorite_news);
   }
 
+  /**Function that returns favorite news */
   get_favorite_news(): New[] {
-    console.log("entre a la funcion");
     this.favorite_news = this._news_service.get_favorites_list();
     return this.favorite_news;
 

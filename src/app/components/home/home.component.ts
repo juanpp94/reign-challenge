@@ -3,6 +3,7 @@ import { FormControl, FormGroup } from '@angular/forms';
 import { New } from 'src/app/models/news';
 import { NewsService } from 'src/app/services/news.service';
 
+/**Component of the All News View */
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
@@ -16,23 +17,18 @@ export class HomeComponent implements OnInit {
 
   ngOnInit(): void {
     this.getNews();
-    
-    //console.log("these are the news",this.news);
   }
-
+/**Function that returns all news */
   getNews(): New[] {
-    //console.log("entre a la funcion");
     this._news_service.getNews$().subscribe((news:New[]) => this.news = news);
-    console.log(this.news);
-    //setTimeout(() => console.log("espero 3 segundos"),3000);
+
     return this.news;
   }
 
+/**Function that returns the category that user selected */
   get_category(category: string): void {
-    //console.log(category);
     this._news_service.category = category;
     console.log(this._news_service.category);
-    //this._news_service.getNews$().subscribe((news:New[]) => this.news = news);
     this.getNews();
   }
 }
