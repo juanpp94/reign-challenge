@@ -60,10 +60,14 @@
         column-gap: 5px;
     }
 
-    .new  {
+    a  {
         text-decoration: none;
         color: #606060;
      }
+
+    a:hover {
+        color: #0000;
+    }
     
 
      .new  .time-information {

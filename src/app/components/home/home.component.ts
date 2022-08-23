@@ -11,6 +11,7 @@ import { NewsService } from 'src/app/services/news.service';
 export class HomeComponent implements OnInit {
   select_category_form: FormGroup = new FormGroup({});
   news: New[] = [];
+  page: number = 1;
   constructor(private _news_service: NewsService) { }
 
   ngOnInit(): void {
@@ -31,7 +32,7 @@ export class HomeComponent implements OnInit {
     //console.log(category);
     this._news_service.category = category;
     console.log(this._news_service.category);
-    this._news_service.getNews$().subscribe((news:New[]) => this.news = news);
+    //this._news_service.getNews$().subscribe((news:New[]) => this.news = news);
     this.getNews();
   }
 }
