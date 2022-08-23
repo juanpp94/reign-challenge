@@ -12,6 +12,7 @@ import { FavesComponent } from './components/faves/faves.component';
 import { RouterModule } from '@angular/router';
 import { FavNewComponent } from './components/fav-new/fav-new.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import {NgxPaginationModule} from 'ngx-pagination';
 
 @NgModule({
   declarations: [
@@ -28,6 +29,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     AppRoutingModule,
     HttpClientModule,
     RouterModule,
+    NgxPaginationModule,
     FormsModule,
     ReactiveFormsModule
   ],

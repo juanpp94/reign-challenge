@@ -9,5 +9,8 @@
     </form>
 </div>
 <div class="wrapper">
-    <app-new class="new-element" [new]="new" *ngFor="let new of news"></app-new>
+    <app-new class="new-element" [new]="new" *ngFor="let new of news | paginate: { itemsPerPage: 8, currentPage: page }"></app-new>
 </div>
+<pagination-controls (pageChange)="page = $event" previousLabel="Previous" nextLabel="Next"></pagination-controls>
+
+
