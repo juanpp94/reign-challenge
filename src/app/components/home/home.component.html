@@ -1,0 +1,13 @@
+<div class="wrapper2">
+    <form>
+        <select name="select">
+            <option (click)="get_category('')"  selected>Select your news</option>
+            <option (click)="get_category('angular')">Angular</option>
+            <option (click)="get_category('reactjs')">Reactjs</option>
+            <option (click)="get_category('vuejs')">Vuejs</option>
+        </select>
+    </form>
+</div>
+<div class="wrapper">
+    <app-new class="new-element" [new]="new" *ngFor="let new of news"></app-new>
+</div>
