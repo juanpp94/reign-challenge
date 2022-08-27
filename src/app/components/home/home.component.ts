@@ -25,6 +25,10 @@ export class HomeComponent implements OnInit {
     return this.news;
   }
 
+  pageEvent(pageNumber: number): void {
+    this.page = pageNumber;
+  }
+
 /**Function that returns the category that user selected */
   get_category(category: string): void {
     this._news_service.category = category;

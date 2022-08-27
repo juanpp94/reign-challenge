@@ -12,7 +12,7 @@ import { FavesComponent } from './components/faves/faves.component';
 import { RouterModule } from '@angular/router';
 import { FavNewComponent } from './components/fav-new/fav-new.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import {NgxPaginationModule} from 'ngx-pagination';
+import { NumberedPaginationComponent } from './components/numbered-pagination/numbered-pagination.component';
 
 @NgModule({
   declarations: [
@@ -22,14 +22,14 @@ import {NgxPaginationModule} from 'ngx-pagination';
     HomeComponent,
     NewComponent,
     FavesComponent,
-    FavNewComponent
+    FavNewComponent,
+    NumberedPaginationComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
     RouterModule,
-    NgxPaginationModule,
     FormsModule,
     ReactiveFormsModule
   ],
