@@ -11,7 +11,7 @@ import { NewsService } from 'src/app/services/news.service';
 })
 export class HomeComponent implements OnInit {
   news: New[] = [];
-  activePage:number = 0;  
+  page:number = 1;  
   
  
 
