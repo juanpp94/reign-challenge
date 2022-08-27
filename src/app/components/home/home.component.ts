@@ -37,9 +37,11 @@ export class HomeComponent implements OnInit {
 
 /**Function that returns the category that user selected */
   get_category(category: string): void {
+    console.log(this.news);
     this._news_service.category = category;
     localStorage.setItem("filter",category);
     console.log(this._news_service.category);
+    console.log(this.news);
     this.getNews();
   }
 

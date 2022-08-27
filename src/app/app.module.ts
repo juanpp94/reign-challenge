@@ -12,6 +12,7 @@ import { FavesComponent } from './components/faves/faves.component';
 import { RouterModule } from '@angular/router';
 import { FavNewComponent } from './components/fav-new/fav-new.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { NumberedPaginationComponent } from './components/numbered-pagination/numbered-pagination.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     HomeComponent,
     NewComponent,
     FavesComponent,
-    FavNewComponent
+    FavNewComponent,
+    NumberedPaginationComponent
   ],
   imports: [
     BrowserModule,
