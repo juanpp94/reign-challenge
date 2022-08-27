@@ -16,3 +16,11 @@
 
 
 
+<app-numbered-pagination
+  [index]="page"
+  [totalCount]="news.length"
+  [pageSize]="8"
+  [rulerLength] = "8"
+  (page)="pageEvent($event)"
+></app-numbered-pagination>
+

@@ -13,10 +13,6 @@ import { RouterModule } from '@angular/router';
 import { FavNewComponent } from './components/fav-new/fav-new.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
-import { PaginationPipe } from './pipes/pagination.pipe';
-import { NoopAnimationsModule } from '@angular/platform-browser/animations';
-import { PaginationComponent } from './components/pagination/pagination.component';
-
 @NgModule({
   declarations: [
     AppComponent,
@@ -25,16 +21,15 @@ import { PaginationComponent } from './components/pagination/pagination.componen
     HomeComponent,
     NewComponent,
     FavesComponent,
-    FavNewComponent,
-    PaginationPipe,
-    PaginationComponent
+    FavNewComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
     RouterModule,
-    NoopAnimationsModule
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [NewsService],
   bootstrap: [AppComponent]
