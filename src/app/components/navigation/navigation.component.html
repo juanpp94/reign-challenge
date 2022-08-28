@@ -1,9 +1,11 @@
 <div class="navigation">
     <nav>
-        <button routerLink="/" class="nav-button">
+        <button routerLink="/" routerLinkActive="active-link" [routerLinkActiveOptions]="{exact:
+            true}" class="nav-button">
             <span>All</span>
         </button>
-        <button routerLink="/faves" class="nav-button">
+        <button routerLink="/faves" routerLinkActive="active-link" [routerLinkActiveOptions]="{exact:
+            true}" class="nav-button">
             <span>My faves</span>
         </button>
     </nav>

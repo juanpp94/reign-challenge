@@ -23,7 +23,7 @@ nav {
     color: #606060;
 }
 
-.nav-button:focus{
+.active-link{
     border: solid 1px #1797ff;
     color: #1797ff;
 }
