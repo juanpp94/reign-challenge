@@ -12,7 +12,7 @@ import { NewsService } from 'src/app/services/news.service';
 export class HomeComponent implements OnInit {
   news: New[] = [];
   page:number = 1;  
-  
+  loader: boolean = true;
  
 
 
@@ -26,7 +26,10 @@ export class HomeComponent implements OnInit {
  
 /**Function that returns all news */
   getNews(): New[] {
-    this._news_service.getNews$().subscribe((news:New[]) => this.news = news);
+    this._news_service.getNews$().subscribe((news:New[]) => 
+    {this.news = news;
+      this.loader = false;
+    });
 
     return this.news;
   };

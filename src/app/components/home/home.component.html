@@ -1,3 +1,7 @@
+<div class="loader" *ngIf="loader">
+    <div class="bar"></div>
+  </div>
+  
 <div class="wrapper2">
     <form>
         <select name="select">
@@ -16,11 +20,5 @@
 
 
 
-<app-numbered-pagination
-  [index]="page"
-  [totalCount]="news.length"
-  [pageSize]="8"
-  [rulerLength] = "8"
-  (page)="pageEvent($event)"
-></app-numbered-pagination>
+
 
