@@ -8,6 +8,9 @@
     color: #606060;
 }
 
+.new:hover {
+    opacity: 0.5;
+}
 
  .new  .time-information {
     margin-top: 16px;

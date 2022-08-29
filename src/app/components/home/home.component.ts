@@ -22,7 +22,10 @@ export class HomeComponent implements OnInit {
     this.getNews();
   }
 
-  
+  myFunction() {
+    console.log("entre");
+    document.getElementById("myDropdown")!.classList.toggle("show");
+  }
  
 /**Function that returns all news */
   getNews(): New[] {
